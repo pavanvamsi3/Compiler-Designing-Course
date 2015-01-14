@@ -1,0 +1,126 @@
+All XML Elements Must Have a Closing Tag
+
+In HTML, you will often see elements that don't have a closing tag:
+
+<p>This is a paragraph
+<p>This is another paragraph
+
+
+In XML, it is illegal to omit the closing tag. All elements must have a closing tag:
+
+<p>This is a paragraph</p>
+<p>This is another paragraph</p>
+
+
+Note: You might have noticed from the previous example that the XML declaration did not have a closing tag. This is not an error. The declaration is not a part of the XML document itself, and it has no closing tag.
+
+
+2. XML Tags are Case Sensitive
+
+XML elements are defined using XML tags.
+
+XML tags are case sensitive. With XML, the tag <Letter> is different from the tag <letter>.
+
+Opening and closing tags must be written with the same case:
+
+<Message>This is incorrect</message>
+<message>This is correct</message>
+
+
+Note: "Opening and closing tags" are often referred to as "Start and end tags". Use whatever you prefer. It is exactly the same thing.
+
+
+3. XML Elements Must be Properly Nested
+
+In HTML, you might see improperly nested elements:
+
+<b><i>This text is bold and italic</b></i>
+
+
+In XML, all elements must be properly nested within each other:
+
+<b><i>This text is bold and italic</i></b>
+
+
+In the example above, "Properly nested" simply means that since the <i> element is opened inside the <b> element, it must be closed inside the <b> element.
+
+4. XML Documents Must Have a Root Element
+
+XML documents must contain one element that is the parent of all other elements. This element is called the root element.
+
+<root>
+<child>
+<subchild>.....</subchild>
+</child>
+</root>
+
+
+5. XML Attribute Values Must be Quoted
+
+XML elements can have attributes in name/value pairs just like in HTML.
+
+In XML the attribute value must always be quoted. Study the two XML documents below. The first one is incorrect, the second is correct:
+
+<note date=12/11/2007>
+<to>Tove</to>
+<from>Jani</from> 
+</note>
+
+
+<note date="12/11/2007">
+<to>Tove</to>
+<from>Jani</from>
+</note>
+
+
+The error in the first document is that the date attribute in the note element is not quoted.
+
+6. Entity References
+
+Some characters have a special meaning in XML.
+
+If you place a character like "<" inside an XML element, it will generate an error because the parser interprets it as the start of a new element.
+
+This will generate an XML error:
+
+<message>if salary < 1000 then</message>
+
+
+To avoid this error, replace the "<" character with an entity reference:
+
+<message>if salary &lt; 1000 then</message>
+
+
+There are 5 predefined entity references in XML:
+
+&lt;	<	less than
+&gt;	>	greater than
+&amp;	&	ampersand 
+&apos;	'	apostrophe
+&quot;	"	quotation mark
+
+
+Note: Only the characters "<" and "&" are strictly illegal in XML. The greater than character is legal, but it is a good habit to replace it.
+
+
+7. Comments in XML
+
+The syntax for writing comments in XML is similar to that of HTML.
+
+<!-- This is a comment -->
+
+8. White-space is Preserved in XML
+
+HTML truncates multiple white-space characters to one single white-space:
+
+HTML:	Hello           my name is Tove
+Output:	Hello my name is Tove.
+
+
+With XML, the white-space in a document is not truncated.
+
+9. XML Stores New Line as LF
+
+In Windows applications, a new line is normally stored as a pair of characters: carriage return (CR) and line feed (LF). The character pair bears some resemblance to the typewriter actions of setting a new line. In Unix applications, a new line is normally stored as a LF character. Macintosh applications use only a CR character to store a new line.
+
+Do you have any opinion, leave a comment.

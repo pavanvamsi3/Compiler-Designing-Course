@@ -1,0 +1,14 @@
+<?XML-VERSION 1.0?>
+<CATALOG>
+  <CD>
+  <!-- This is a comment -->  
+    <TITLE>Empire Burlesque</TITLE>
+    <ARTIST>Bob Dylan</ARTIST>
+    <COUNTRY>USA</COUNTRY>
+    <COMPANY>Columbia</COMPANY>
+    <PRICE>10.90</PRICE>
+    <!-- This is a errored comment --  
+    <YEAR>1985</YEAR>
+  </CD>
+</CATALOG>
+

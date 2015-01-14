@@ -1,0 +1,124 @@
+CJ Compiler
+
+6th Semester Compiler Design Project
+---------------------------------------
+	
+1. Written and edited by :
+..........................
+
+Shivani Maheshwari	RIT2009037
+Sunil Kumar		RIT2009021
+Kshitij Bansal 		RIT2009078
+Saurabh Pandey		RIT2009011
+Pradeep Kumar Mishra	RIT2009025
+
+
+2.Introduction
+.................
+
+This version of CJ compiler supports functionality for detection of basic syntax 
+errors in any C/Java program given as input. Besides this the parser would first 
+identify the input file type(C/Java). Based on the type of input it will decide 
+the type of tokens it has to send to the parser. Depending upon the C/Java code,
+the corresponding header rule will be executed.
+
+The name compiler is primarily used for programs that translate source code from 
+a high-level programming language to a lower level language (e.g. assembly 
+language or machine code). Mini CJ compiler is a computer program (or set of programs) 
+that transforms source code written in any programming language(C/J)into another
+computer language (the target language, often having a binary form known as 
+object code). A compiler is likely to perform many or all of the following 
+operations: lexical analysis, preprocessing, parsing, semantic analysis 
+(Syntax-directed translation), code generation, and code optimization.
+The term compiler-compiler is sometimes used to refer to a parser generator,
+a tool often used to help create the lexer and parser.
+
+3. Files
+..........
+
+This distribution of CJ Compiler consists of the following files:
+
+  * Readme.txt, the file you are currently reading.
+
+  * Makefile that can be used to compile CJ Compiler on Unix-like
+    systems.  For further information about how to compile CJ
+    yourself, read section 5 below.
+
+  * cj.l i.e. 'lex' file that extracts tokens from the input
+
+  * cj.y i.e. 'yacc' file which is the kernel of the CJ compiler and 
+    contains the grammar for parsing the input. 
+
+  * in.java sample input java program
+
+  * in.c sample input c program
+
+
+4. Utilities used
+..................
+
+  * Flex/Lex 
+  * Yacc/Bison
+  * GCC compiler
+
+5. Compiling it yourself
+------------------------
+
+To compile individual files use the following commands : 
+
+	$ bison -v -d cj.y		# Compile parser
+	$ lex cj.l			# Compile lexer
+	$ gcc cj.tab.c -lfl		# Link libraries
+	$ ./a.out input_file_name	# Run the parser
+	$ cat -n input_file_name	# View the input file in console directly
+
+On Unix systems, it should usually be possible to compile
+CJ Compiler directly from the source code with the included Makefile.
+
+6. Pros and Cons
+..................
+
+Pros:
+	* Identifies the Java/C file type.
+	* Throws error and terminates if "File of '.c' or '.java' not found".
+	* Never parses the Java syntax as a valid token if written in a C program and vice-versa.
+	* Arithmatic (+,-,*,/), Assignment (=), Logical( &&, ||, ^), Relational( <,>, >=, <=, != ) and Bitwise( &,|,^) operator support.
+	* Primitive Datatypes parsing.
+	* Support for any inbuilt function operation eg. maths : i = i/pow(i,j);.
+	* Expression handling such as a+b+(c*d).				
+	* Support for Unary operations such as '++','--'.
+	* Function Prototype.
+	* Function Declaration.
+	* Function Calling.
+	* Formal and Actual function parameters.
+	* Return statements from function of any type.
+	* Variable Initialization.
+	* Nested for/while loop and if statement.		
+
+	* Language specific :
+
+		Java :
+		.......
+		Able to identify :
+			* Packages Declaration.
+			* External Package Imports.
+			* Modifiers such as public, static, protected, private, abstract etc.
+			* As per java specification no "Multiple Inheritance allowed".
+			* Interfaces Implementation using 'implements'.
+			* Inheriting Classes 'extends'.
+			* Define function and classes with modifiers eg : public int sum( int a, int b );.			
+			* User defined datatype : Array, String parsing.
+			* Can throw any type of exception.			
+
+		C :
+		.....
+		Able to identify :
+			* Header file declaration of format (*.*).
+			* User Defined datatype : Array declaration.
+			* Support for pointer declaration.
+
+	* The parser is able to find any error(s) associated with the above stated functionalities.
+
+Cons :	
+	Since this is a mini CJ Compiler so only necessary functinality has been embedded into it.
+However the grammar is flexible and open to modifications of any type as the user may deem necessary.

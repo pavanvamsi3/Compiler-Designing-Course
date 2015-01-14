@@ -1,0 +1,24 @@
+
+int f(int *arr,int *a)
+{
+	int a
+	*a=*a+30;
+}
+int main()
+{
+	int i=0
+	int arr[10];
+	
+	i+++++i;
+	
+	for(i=0;i<10;i++){
+	
+	i=i/(i-floor(i));
+	
+	printf("%d\n",i);
+	f(arr,&i);
+	printf("%d\n",i);
+	}
+	return 0;
+}
+

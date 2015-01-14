@@ -1,0 +1,39 @@
+abc() begin
+	a,b;
+	a++ <- b;
+	prin(hello);
+
+	for i <- 0 to 10 begin
+		a <- 1;
+		b <- a;
+	end
+	
+	
+	for ( i <- 0; i < 10; 1) {
+		a <- b+i;
+		ct << abc;
+	}
+
+	while i< 100 
+	begin
+	end
+
+	while i< 100 
+	begin
+		i++;
+		a++;
+	end
+
+
+	repeat
+	begin
+	 p++;
+	end until i<10;
+	
+	repeat begin
+		i++;
+	end until i<10;
+
+
+	return 0;
+end

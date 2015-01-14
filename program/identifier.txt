@@ -1,0 +1,13 @@
+#include<iostream>
+#include<stdio.h>
+/*IMPLEPROGRAMTOPRINTHELLOWORLD
+
+THATISTHEWAYTOWRITEACOMMENT
+**/
+usingnamespacestd;
+intmain()
+{i=15;
+//PRINTINGHELLOWORLD
+cout<<"helloworld\n";
+return0;
+}

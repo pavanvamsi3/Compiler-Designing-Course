@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int f(int a[],int b){
+	b = 2;
+	return b;
+}
+
+int main(){
+	int i;
+	i=0
+	i = i+++++i++;
+	i=i/(i-floor(i));
+	int a[10];
+	f(a,i)
+	return 0;
+}

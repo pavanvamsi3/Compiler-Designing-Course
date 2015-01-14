@@ -1,0 +1,4 @@
+lex java.l
+yacc -d java.y
+gcc lex.yy.c y.tab.c -java_compiler
+.java_compiler < in2.java

@@ -1,0 +1,19 @@
+#include<iostream.h>
+void main()
+{
+int i,n;
+long int p=1; // or long double p=1; for exponential result which I
+don't want.
+cin>>n;
+if(n==0)
+{
+cout<<n;
+}
+else
+{
+for(i=n;i>=1;i--)
+{
+p=p*i ;
+}
+}
+}

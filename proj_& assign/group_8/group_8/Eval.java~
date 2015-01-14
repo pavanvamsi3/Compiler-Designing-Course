@@ -1,0 +1,13 @@
+class fun{
+	 void main(String[ args{
+		int i= 1
+		int j
+		i= 5
+		while(i>=1{
+			for(j=1;j<=i;j++)
+				System.out.print("*");
+			i=i-2
+			System.out.println(;
+		}
+	 }
+}

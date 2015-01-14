@@ -1,0 +1,10 @@
+int main (){
+	int i, a, b = 1;
+	printf("Hello");
+
+	for(i = 0; i < 10; i++{
+		a = b+i;
+	}
+
+	return 0;
+}

@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main ( )
+{
+//start of the program
+    char *s ;
+    s="HelloWorld";
+    /*
+      one more comment
+     */
+    float b;
+    printf("%s",s);
+    return 0;
+//end of the program 
+}
